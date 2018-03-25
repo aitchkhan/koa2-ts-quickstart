@@ -1,0 +1,25 @@
+version: '3.5'
+
+services:
+  koa2-basic-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: node-app
+    environment:
+      NODE_ENV: development
+    ports:
+      - 4000:4000
+      - 9229:9229
+    command: node --inspect=0.0.0.0:9229 --inspect-brk bin/server
+  mysql:
+    image: mysql
+    container_name: my-app-sql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - 3306:3306
+
+# volumes:
+#   my-app-sql:
+

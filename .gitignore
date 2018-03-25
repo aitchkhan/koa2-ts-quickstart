@@ -34,6 +34,6 @@ node_modules
 
 # IDE configuration directory
 .idea
-
+.vscode/*
 # Configuration files
 src/conf/*.json
