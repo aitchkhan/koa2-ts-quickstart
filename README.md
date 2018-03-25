@@ -1,4 +1,4 @@
-## `koa2-ts-init`
+## `koa2-ts-quickstart`
 > Typescript fork of [koa2-kickstarter](https://github.com/umayr/koa2-kickstarter). Wondering why Typescript ? Read [this](http://stackoverflow.com/questions/12694530/what-is-typescript-and-why-would-i-use-it-in-place-of-javascript) post on StackOverflow
 
 ### Setup
@@ -35,18 +35,20 @@
 - [Koa Router](https://github.com/alexmingoia/koa-router) For routing and all.
 - [Debug](https://github.com/visionmedia/debug) Debug messages in the development environment.
 - [Bunyan](https://github.com/trentm/node-bunyan) Extensive logging module.
-- [Ava](https://github.com/avajs/ava) For unit tests.
+- [Jest](https://github.com/facebook/jest) For all tests.
 - [Boom](https://github.com/hapijs/boom) HTTP Errors.
 - [Convict](https://github.com/mozilla/node-convict) Configuration management.
 - [Typescript](https://github.com/Microsoft/TypeScript) Typed superset of Javascript. Supports ES6/ES7 features.
 - [TSLint](https://github.com/palantir/tslint) Linting purposes.
 - [Nodemon](https://github.com/remy/nodemon) Restart the server automatically (hot-reloading).
+- [Docker](https://www.docker.com/) Well, :whale: :dark_sunglasses:  
 
 And many more small packages.
 
 ### Scripts
 
 - `npm start` - simply starts the server
+- `npm run watch` - reload changes
 - `npm test` - execute all unit tests
 - `npm run lint` - lints all the files in `src/` folder
 - `npm run lint:fix` - fixes all the possible linting errors
@@ -56,15 +58,11 @@ And many more small packages.
 
 ### Docker
 
-`Dockerfile` for the project has been packaged. Running instructions are standard and can be found below:
-
-#### Build
-```bash
-λ docker build -t koa .
-```
+`Dockerfile` for the project has been packaged.
+`docker-compose` for running both mysql volume container and node.js container as well.
+place development.secret file in `src/conf/` and place the password variable as mentioned in the `development` file. 
 
 #### Run
 ```bash
-# you can set the DEBUG environment variable through -e DEBUG={value} 
-λ docker run -dp 4000:4000 koa
+λ docker-compose up --build
 ```
