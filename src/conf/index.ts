@@ -24,6 +24,12 @@ const conf = convict({
     default: 4000,
     env: 'PORT',
   },
+  accessKey: {
+    doc: 'the app access key',
+    format: String,
+    default: '',
+    env: 'ACCESS_KEY',
+  }
 });
 const d = debug('kickstarter:conf');
 const env = conf.get('env');

@@ -2,11 +2,14 @@ import * as Koa from 'koa';
 import * as bodyparserMiddleware from 'koa-bodyparser';
 import * as loggerMiddleware from 'koa-bunyan-logger';
 import * as jsonMiddleware from 'koa-json';
+import * as dotenv from 'dotenv';
 
+dotenv.config();
 import * as debug from 'debug';
 import errorMiddleware from './middleware/error';
 import requestMiddleware from './middleware/request';
 import responseMiddleware from './middleware/response';
+import authenticationMiddleware from './middleware/completed-authentication-middleware';
 
 import routeMiddleware from './route';
 
@@ -20,6 +23,7 @@ app.use(jsonMiddleware());
 app.use(loggerMiddleware());
 app.use(requestMiddleware());
 app.use(errorMiddleware());
+app.use(authenticationMiddleware());
 
 // Registers routes via middleware
 app.use(routeMiddleware());
