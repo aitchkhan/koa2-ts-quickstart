@@ -35,7 +35,7 @@ try {
 
   conf.loadFile(path);
 } catch (error) {
-  d('file doesn\'t exist, loading defaults');
+  d("file doesn't exist, loading defaults");
 }
 
 conf.validate({ allowed: 'strict' });
