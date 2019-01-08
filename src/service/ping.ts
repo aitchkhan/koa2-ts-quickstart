@@ -1,3 +1,5 @@
+import { pingDatabase } from '../repository/ping';
 export const ping = async () => {
-  return {message: 'pong!!'};
+  const response = await pingDatabase();
+  return {message: `pong!! ->  ${response[0][0].response}`};
 };
