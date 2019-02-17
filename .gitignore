@@ -37,3 +37,6 @@ node_modules
 .vscode/*
 # Configuration files
 src/conf/*.json
+
+# apidoc
+apidoc/

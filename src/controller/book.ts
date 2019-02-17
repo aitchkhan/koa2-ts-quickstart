@@ -13,3 +13,7 @@ export const post = async (ctx: Context) => {
 export const put = (ctx: Context) => {
   ctx.body = '[PUT] books';
 };
+
+export const del = (ctx: Context) => {
+  ctx.body = '[DEL] books';
+};
