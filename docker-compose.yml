@@ -17,7 +17,7 @@ services:
     volumes:
       - ".:/usr/app"
   mysql:
-    image: mysql
+    image: mysql:5.7
     container_name: my-app-sql
     env_file:
       - src/conf/development

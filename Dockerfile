@@ -1,4 +1,4 @@
-FROM node:lts-slim
+FROM node:lts
 
 RUN mkdir -p /usr/app
 WORKDIR /usr/app
