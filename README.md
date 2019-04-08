@@ -6,9 +6,9 @@
 ```bash
 
   # clone the repository
-  λ git clone https://github.com/mohuk/koa2-ts-init
+  λ git clone https://github.com/aitchkhan/koa2-ts-quickstart
   # change the current directory
-  λ cd koa2-ts-init
+  λ cd koa2-ts-quickstart
   # install all dependencies
   λ npm install
   #Create a file development.secret in src/conf folder and paste:

@@ -1,4 +1,5 @@
 import { Column, Entity, PrimaryGeneratedColumn  } from 'typeorm';
+import { Alias } from 'typeorm/query-builder/Alias';
 
 @Entity()
 export class Book {

@@ -43,6 +43,6 @@ createConnection().then((connection: any) => {
   d('db connection established');
   app.listen(conf.get('port'));
 }).catch((e: Error) => {
-  logg('db connection failed', e);
+  d('db connection failed', e);
   process.exit(0);
 });

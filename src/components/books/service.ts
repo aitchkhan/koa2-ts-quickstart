@@ -1,6 +1,6 @@
 import { Container } from 'typedi';
-import { Book } from '../entity/book';
-import { BookRepository } from '../repository/book';
+import { Book } from './entity';
+import { BookRepository } from './repository';
 
 export const getBooks = () => {
   const repo = Container.get(BookRepository);

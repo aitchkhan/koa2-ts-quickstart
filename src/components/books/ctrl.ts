@@ -1,5 +1,5 @@
 import { Context } from 'koa';
-import { createBook, getBooks  } from '../service/book';
+import { createBook, getBooks  } from './service';
 
 export const get = async (ctx: Context) => {
   ctx.body = { books: await getBooks(), time: Date.now() };

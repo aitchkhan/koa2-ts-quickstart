@@ -2,7 +2,7 @@ import { methodNotAllowed, notImplemented } from 'boom';
 import * as compose from 'koa-compose';
 import * as Router from 'koa-router';
 
-import * as Ctrl from '../controller/book';
+import * as Ctrl from '../components/books/ctrl';
 
 const router = new Router({
   prefix: '/books',

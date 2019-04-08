@@ -1,11 +1,11 @@
 version: '3.5'
 
 services:
-  koa2-basic-app:
+  api:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: node-app
+    container_name: api
     env_file:
       - src/conf/development
       - src/conf/development.secret
@@ -18,15 +18,15 @@ services:
       - ".:/usr/app"
   mysql:
     image: mysql:5.7
-    container_name: my-app-sql
+    container_name: koa-app-sql
     env_file:
       - src/conf/development
       - src/conf/development.secret
     ports:
       - 3306:3306
     volumes:
-      - my-app-sql:/var/lib/mysql
+      - mysql:/var/lib/mysql
 
 volumes:
-  my-app-sql:
+  mysql:
 
