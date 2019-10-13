@@ -40,9 +40,9 @@ d('server started at port: %d', conf.get('port'));
 useContainer(Container);
 // using config from ormconfig.js
 createConnection().then((connection: any) => {
-  d('db connection established');
+  console.log('db connection established');
   app.listen(conf.get('port'));
 }).catch((e: Error) => {
-  d('db connection failed', e);
+  console.log('db connection failed', e);
   process.exit(0);
 });

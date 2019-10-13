@@ -1,21 +1,13 @@
-import { Service } from 'typedi';
-import { EntityManager, Repository } from 'typeorm';
-import {  OrmManager, OrmRepository } from 'typeorm-typedi-extensions';
+import { getRepository } from 'typeorm';
 
 import { Book } from './entity';
 
-@Service()
-export class BookRepository {
-  @OrmManager()
-  private entityManager: EntityManager;
+export const save = async (payload: Book) => {
+  const repo = getRepository(Book);
+  return repo.save(payload);
+};
 
-  constructor(@OrmRepository(Book) private ormRepository: Repository<Book>) { }
-
-  public save(book: Book) {
-    return this.ormRepository.save(book);
-  }
-
-  public findAll() {
-    return this.ormRepository.find();
-  }
-}
+export const findAll = async () => {
+  const repo = getRepository(Book);
+  return repo.find();
+};
