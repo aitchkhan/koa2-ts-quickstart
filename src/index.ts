@@ -39,10 +39,12 @@ d('server started at port: %d', conf.get('port'));
 
 useContainer(Container);
 // using config from ormconfig.js
-createConnection().then((connection: any) => {
+createConnection().then(() => {
+  // tslint:disabled-next-line
   console.log('db connection established');
   app.listen(conf.get('port'));
 }).catch((e: Error) => {
+  // tslint:disabled-next-line
   console.log('db connection failed', e);
   process.exit(0);
 });
