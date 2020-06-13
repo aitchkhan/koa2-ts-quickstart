@@ -17,7 +17,7 @@ import requestMiddleware from './middleware/request';
 
 import routeMiddleware from './route';
 
-import conf from './conf';
+import conf from '../conf';
 
 const app = new Koa();
 const d = debug('kickstarter:root');

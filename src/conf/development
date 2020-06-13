@@ -1,6 +1,0 @@
-NODE_ENV=development
-MYSQL_DATABASE=my-app
-MYSQL_DATABASE_USER=root
-#MYSQL_ROOT_PASSWORD=<development.secret>
-DATABASE_PORT=3306
-DATABASE_HOST=koa-app-sql
