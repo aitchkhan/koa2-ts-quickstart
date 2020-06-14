@@ -53,7 +53,6 @@
     "lint-staged": "^10.2.10",
     "nodemon": "^2.0.4",
     "ts-jest": "^26.1.0",
-    "tslint": "^6.1.2",
     "typescript": "^3.9.5"
   },
   "husky": {
