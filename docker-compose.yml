@@ -7,21 +7,23 @@ services:
       dockerfile: Dockerfile
     container_name: api
     env_file:
-      - src/conf/development
-      - src/conf/development.secret
+      - conf/development
+      - conf/development.secret
     ports:
       - 4000:4000
       - 9229:9229
     depends_on:
       - mysql
     volumes:
-      - ".:/usr/app"
+      - "./bin:/app/bin"
+      - "./conf:/app/conf"
+      - "./src:/app/src"
   mysql:
     image: mysql:5.7
-    container_name: koa-app-sql
+    container_name: koa_sql
     env_file:
-      - src/conf/development
-      - src/conf/development.secret
+      - conf/development
+      - conf/development.secret
     ports:
       - 3306:3306
     volumes:

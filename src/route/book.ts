@@ -1,4 +1,4 @@
-import { methodNotAllowed, notImplemented } from 'boom';
+import { methodNotAllowed, notImplemented } from '@hapi/boom';
 import * as compose from 'koa-compose';
 import * as Router from 'koa-router';
 

@@ -1,0 +1,12 @@
+NODE_ENV=development
+#MYSQL_ROOT_PASSWORD=<development.secret>
+
+TYPEORM_CONNECTION=mysql
+TYPEORM_HOST=koa_sql
+TYPEORM_PORT=3306
+TYPEORM_USERNAME=root
+#TYPEORM_PASSWORD=<development.secret>
+TYPEORM_DATABASE=books_local
+TYPEORM_MIGRATIONS=database/migrations/*.ts
+TYPEORM_ENTITIES=src/components/**/*.ts
+TYPEORM_MIGRATIONS_DIR=database/migrations

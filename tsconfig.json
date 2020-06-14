@@ -16,6 +16,6 @@
     "experimentalDecorators": true
   },
   "include": [
-    "src/**/*"
+    "src/**/*", "conf", "test/unit"
   ]
 }
